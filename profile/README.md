@@ -15,25 +15,7 @@ Just as the lakehouse dissolved the boundary between data warehouses and data la
 
 ## Architecture in three layers
 
-```mermaid
-flowchart TB
-  subgraph Protocol["Protocol layer — stateless"]
-    K["Kafka"]
-    P["Pulsar"]
-    R["REST"]
-    G["gRPC"]
-  end
-  subgraph Metadata["Metadata layer — Lakestream Catalog"]
-    C["catalog · namespace · stream<br/>federates Unity · Horizon · S3 Tables · Iceberg REST"]
-  end
-  subgraph Data["Data layer — open object storage"]
-    W["Distributed write-ahead log"]
-    PQ["Parquet · Iceberg · Delta Lake"]
-  end
-  Protocol --> Metadata
-  Metadata --> Data
-  W --> PQ
-```
+![Lakestream architecture overview](./assets/architecture-overview.webp)
 
 **Data layer** — a distributed write-ahead log delivers real-time acknowledgment, then compacts into Parquet and lands in open table formats on object storage.
 
