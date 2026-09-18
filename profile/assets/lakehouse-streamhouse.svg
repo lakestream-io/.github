@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="1000" height="594" viewBox="0 0 1000 594" role="img" aria-labelledby="title desc">
   <title id="title">Two houses, one foundation</title>
-  <desc id="desc">A lakehouse, holding data to analyze the business, and a Streamhouse, holding data to run the business, share one governance layer and one open infrastructure layer on object storage, where open table formats (Iceberg and Delta) and open stream storage (Lakestream) sit side by side.</desc>
+  <desc id="desc">A Streamhouse, holding data to run the business, and a lakehouse, holding data to analyze the business, share one governance layer and one open infrastructure layer on object storage, where open stream storage (Lakestream) and open table formats (Iceberg and Delta) sit side by side.</desc>
   <style>
     .sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif; }
     .mono { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace; }
@@ -25,24 +25,24 @@
 
   <!-- Connectors, drawn first so the cards and the governance bar sit on top of them -->
   <path class="wire" d="M250 192V330"/>
-  <path class="wire" d="M768 192V330"/>
-  <path class="wire" d="M660 192V302H400V330"/>
-  <text class="mono note" x="414" y="321">both houses, one foundation</text>
+  <path class="wire" d="M750 192V330"/>
+  <path class="wire" d="M360 192V302H660V330"/>
+  <text class="mono note" x="510" y="321" text-anchor="middle">both houses, one foundation</text>
 
   <!-- The two houses -->
   <rect class="card" x="24" y="24" width="452" height="168" rx="12"/>
-  <text class="sans house" x="52" y="74">LAKEHOUSE</text>
-  <text class="sans body" x="52" y="110">BI · reporting · ad-hoc analysis</text>
-  <text class="sans body" x="52" y="136">batch ingest · scheduled ETL</text>
+  <text class="sans house" x="52" y="74">STREAMHOUSE</text>
+  <text class="sans body" x="52" y="110">apps · agents · analytics</text>
+  <text class="sans body" x="52" y="136">capture · transport · transform · serve</text>
   <path class="rule" d="M52 154H312"/>
-  <text class="mono tag" x="52" y="176">data to analyze the business</text>
+  <text class="mono tag" x="52" y="176">data to run the business</text>
 
   <rect class="card" x="524" y="24" width="452" height="168" rx="12"/>
-  <text class="sans house" x="552" y="74">STREAMHOUSE</text>
-  <text class="sans body" x="552" y="110">apps · agents · analytics</text>
-  <text class="sans body" x="552" y="136">capture · transport · transform · serve</text>
+  <text class="sans house" x="552" y="74">LAKEHOUSE</text>
+  <text class="sans body" x="552" y="110">BI · reporting · ad-hoc analysis</text>
+  <text class="sans body" x="552" y="136">batch ingest · scheduled ETL</text>
   <path class="rule" d="M552 154H812"/>
-  <text class="mono tag" x="552" y="176">data to run the business</text>
+  <text class="mono tag" x="552" y="176">data to analyze the business</text>
 
   <!-- One governance layer -->
   <rect class="card" x="24" y="228" width="952" height="52" rx="10"/>
@@ -59,18 +59,18 @@
   <text class="mono kicker" x="48" y="366">OPEN INFRA</text>
   <text class="sans body" x="48" y="392">the standards</text>
 
-  <rect class="card" x="200" y="352" width="368" height="128" rx="10"/>
-  <text class="mono kicker" x="224" y="380">OPEN TABLE FORMATS</text>
-  <text class="sans big" x="224" y="416">Iceberg · Delta</text>
-  <text class="sans body" x="224" y="442">settled</text>
+  <rect class="stream" x="200" y="352" width="368" height="128" rx="10"/>
+  <text class="mono kicker" x="224" y="380">OPEN STREAM STORAGE</text>
+  <text class="sans big" x="224" y="416">Lakestream</text>
+  <text class="sans body14" x="224" y="442">stream storage + stream materialization</text>
+  <text class="sans body14" x="224" y="462">Apache 2.0</text>
 
-  <rect class="stream" x="592" y="352" width="360" height="128" rx="10"/>
-  <text class="mono kicker" x="616" y="380">OPEN STREAM STORAGE</text>
-  <text class="sans big" x="616" y="416">Lakestream</text>
-  <text class="sans body14" x="616" y="442">stream storage + stream materialization</text>
-  <text class="sans body14" x="616" y="462">Apache 2.0</text>
+  <rect class="card" x="592" y="352" width="360" height="128" rx="10"/>
+  <text class="mono kicker" x="616" y="380">OPEN TABLE FORMATS</text>
+  <text class="sans big" x="616" y="416">Iceberg · Delta</text>
+  <text class="sans body" x="616" y="442">settled</text>
 
-  <text class="mono note" x="592" y="504">← stream materialization</text>
+  <text class="mono note" x="568" y="504" text-anchor="end">stream materialization →</text>
 
   <path class="rule" d="M48 524H952"/>
   <text class="mono note" x="500" y="552" text-anchor="middle">object storage · any cloud · any engine</text>

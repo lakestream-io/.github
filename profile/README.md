@@ -10,7 +10,7 @@ Parquet standardized the file. Apache Iceberg® and Delta Lake standardized the 
 
 Object storage changes that. Once durability belongs to the object store, what's left is a layout and a contract, and the Lakestream specification writes them down: how a stream is laid out in a bucket, how an append becomes durable, how offsets are assigned, how a cursor reads across what's been written and what's been compacted, and how a closed segment is registered as a table. It contains no protocol; the semantics clients see belong to the engine above the storage. Anything can read a stream without asking the process that wrote it.
 
-![A lakehouse, holding data to analyze the business, and a Streamhouse, holding data to run the business, share one governance layer and one open infrastructure layer on object storage, where open table formats (Iceberg and Delta) and open stream storage (Lakestream) sit side by side.](./assets/lakehouse-streamhouse.svg)
+![A Streamhouse, holding data to run the business, and a lakehouse, holding data to analyze the business, share one governance layer and one open infrastructure layer on object storage, where open stream storage (Lakestream) and open table formats (Iceberg and Delta) sit side by side.](./assets/lakehouse-streamhouse.svg)
 
 A lakehouse holds data to analyze the business; a Streamhouse holds data to run it. They stand on the same foundation of object storage, open table formats and catalogs. The lakehouse got its half of that foundation opened a decade ago. Lakestream is our attempt at the other half.
 
